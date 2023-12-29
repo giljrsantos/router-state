@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RotaOrigemComponent } from './rota-origem/rota-origem.component';
+import { RotaDestinoComponent } from './rota-destino/rota-destino.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RotaOrigemComponent,
+    RotaDestinoComponent
   ],
   imports: [
     BrowserModule,
