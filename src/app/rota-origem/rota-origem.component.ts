@@ -65,17 +65,22 @@ export class RotaOrigemComponent {
 
 
 
+  /**
+   * Navega para uma rota diferente 
+   * em um aplicativo Angular e passa
+   * dados para a rota de destino usando
+   *  o estado do Router State.
+   */
   irParaRotaDestino() {
+    const data = {
+      nome: 'GILBERTO',
+      username: 'JUNIOR DOS SANTOS',
+      email: 'giljrsantos@gmail.com',
+      phone: '(27) 9 9808-5875'
+    };
 
-
-    // Passando dados para a rota usando o Router State
     this.router.navigate(["rota-destino"], {
-      state: {
-        nome: this.dados[0].name,
-        username: this.dados[0].username,
-        email: this.dados[0].email,
-        phone: this.dados[0].phone
-      }
+      state: data
     });
   }
 }
