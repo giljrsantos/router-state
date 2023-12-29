@@ -1,27 +1,9 @@
 # RouterState
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+Se você está familiarizado com o desenvolvimento em Angular 2+ , é provável que já tenha enfrentado o desafio de navegar entre diferentes rotas dentro do aplicativo e a necessidade de compartilhar dados entre componentes. Existem várias abordagens para lidar com esse processo, e eu gostaria de destacar o uso do Router State como uma opção eficaz.
 
-## Development server
+Ao utilizar os métodos navigate ou navigateByUrl, é possível aproveitar o objeto Navigate.extras. Este objeto inclui o parâmetro state, que pode receber qualquer tipo de dado (any). Dessa forma, é possível transmitir informações relevantes, conforme ilustrado na imagem abaixo.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+No componente de destino da rota, para recuperar esses dados, basta acessá-los através de window.history.state. Uma vantagem notável é que mesmo se a página for atualizada, as informações permanecerão acessíveis no history.state.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Essa abordagem oferece uma solução robusta para o compartilhamento de dados entre componentes em rotas diferentes, proporcionando uma experiência consistente, mesmo em cenários de atualização de página. #Angular #DesenvolvimentoWeb #RouterStat
